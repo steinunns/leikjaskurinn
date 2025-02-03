@@ -11,10 +11,10 @@ export default function About() {
         to start selling old games in our garage.
       </p>
       <p className={styles.text}>
-        At first it seemed quite strange for people to drop by the owner's house
-        to see the inventory, but later on the business started growing and the
-        garage simply wasn't big enough. That's when we went ahead and built the
-        store you know today.
+        At first it seemed quite strange for people to drop by the owner&apos;s
+        house to see the inventory, but later on the business started growing
+        and the garage simply wasn&apos;t big enough. That&apos;s when we went
+        ahead and built the store you know today.
       </p>
       <p className={styles.text}>
         We want our customers to feel like kids again and rediscover that
@@ -22,13 +22,12 @@ export default function About() {
         bringing retro games back to life and would love to hear any suggestions
         you might have.
       </p>
-      {/* Logo displayed at the top */}
       <div className={styles.logoWrapper}>
         <Image
-          src="/images/logo.png" // Ensure your logo is located at public/images/logo.png
+          src="/images/logo.png" // Ensure your logo is in public/images/logo.png
           alt="Leikjaskúrinn Logo"
-          width={200} // Adjust width as needed
-          height={200} // Adjust height as needed
+          width={200}
+          height={200}
         />
       </div>
     </div>
