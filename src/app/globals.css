@@ -1,42 +1,68 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Ensure the entire wrapper fills the viewport */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Let the main content grow to fill available space */
+.mainContent {
+  flex: 1;
+}
+
+.Container {
+  justify-content: center;
+}
+
+/* Ensure the product card is a fixed size */
+.product-card {
+  width: 245px; /* Fixed width */
+  height: 350px; /* Fixed height */
+  margin: 1rem;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Container for the image with fixed dimensions */
+.product-card .image-container {
+  width: 100%;
+  height: 60%; /* Adjust based on how much space you want for the image */
+  overflow: hidden;
+}
+
+/* Make sure the image fills the container uniformly */
+.product-card .image-container img {
+  max-width: 235px;
+  max-height: 200px;
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* This crops the image to fill the container without distorting it */
+}
+
+/* Container for the product content (name and price) */
+.product-card .content {
+  height: 40%; /* The remaining space for text */
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Fixed height for product name to ensure uniformity */
+.product-card .product-name {
+  height: 3em; /* For example, reserve 3 lines (adjust as needed) */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limits to 2 lines; adjust if needed */
+  -webkit-box-orient: vertical;
+  line-height: 1.5em; /* Ensure consistent line height */
 }

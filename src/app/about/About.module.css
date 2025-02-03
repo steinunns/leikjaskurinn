@@ -1,0 +1,30 @@
+/* About.module.css */
+
+/* Container for the about page */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Wrapper for the logo image */
+.logoWrapper {
+  margin-top: 5rem;
+}
+
+/* Styling for the heading */
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Styling for the paragraph text */
+.text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #555;
+  text-align: justify;
+}
